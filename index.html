@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="./styles/estilos.css" rel="stylesheet"/>
     <title>
         Hola este es el titulo
     </title>
@@ -16,8 +16,8 @@
     <header>
         <h3>Esto es una lista ordenada</h3>
         <ol>
-            <li>Eelemento 1</li>
-            <li>Eelemento 2</li>
+            <li class="textoGris fondoRojo textoGrandeNegrita">Eelemento 1</li>
+            <li class="textoAzul fondoAmarillo">Eelemento 2</li>
             <li>Eelemento 3</li>
             <li>Eelemento 4</li>
 
@@ -28,7 +28,7 @@
             <li>Eelemento 3</li>
             <li>Eelemento 4</li>
         </ul>
-        <div>
+        <div class="textoGrandeNegrita textoAzul">
             Hola esto es un div
         </div>
     </header>
@@ -46,7 +46,7 @@
             <a href="https://www.google.com"> Este es un link externo</a>
             <article>
                 <h3>Parrafo 1</h3>
-                <p>Esto es un parrafo Lorem ipsum dolor sit amet 
+                <p class="parrafoGris">Esto es un parrafo Lorem ipsum dolor sit amet 
                     consectetur, adipisicing elit. Suscipit veniam 
                     quisquam labore cupiditate laborum impedit 
                     obcaecati consectetur sit corporis! Quidem 
@@ -54,7 +54,7 @@
                     sed maiores blanditiis iste?
                 </p>
                 <h3>Parrafo 2</h3>
-                <p>Esto es el tercer parrafo Lorem ipsum dolor sit amet 
+                <p class= "parrafoAngosto parrafoNegro">Esto es el tercer parrafo Lorem ipsum dolor sit amet 
                     consectetur, adipisicing elit. Suscipit veniam 
                     quisquam labore cupiditate laborum impedit 
                     obcaecati consectetur sit corporis! Quidem 
@@ -62,7 +62,7 @@
                     sed maiores blanditiis iste?
                 </p>
                 <h3>Parrafo 3</h3>
-                <p>Esto es el parrafo tercero Lorem ipsum dolor sit amet 
+                <p class="parrafoPadding">Esto es el parrafo tercero Lorem ipsum dolor sit amet 
                     consectetur, adipisicing elit. Suscipit veniam 
                     quisquam labore cupiditate laborum impedit 
                     obcaecati consectetur sit corporis! Quidem 
@@ -70,12 +70,36 @@
                     sed maiores blanditiis iste?
                 </p>
                 <span>Este es un texto corto</span>
-                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Foto de Border collie"/>
-                <img src="./media/bordercollie2.jpg" alt="Foto de Border collie"/>
+                <img class = imagenPequeña src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Foto de Border collie"/>
+                
             </article>
-
+            <img class="imagenPequeña" src="./media/bordercollie2.jpg" alt="Foto de Border collie"/>
         </section>
-        <section>Tabla de la informacion</section>
+        <section>
+            <div class="contenedorConMargen">
+                <div>div1</div>
+                <div>div2</div>
+                <div>div3</div>
+            </div>
+            <div class="contenedorDivsGrid">
+                <div class="divTest">Div1</div>
+                <div class="divTest">Div2</div>
+                <div class="divTest">Div3</div>
+                <div class="divTest">Div4</div>
+                <div class="divTest">Div5</div>
+                <div class="divTest">Div6</div>
+                <div class="divTest">Div7</div>
+            </div>
+            <div class="contenedorDivsFlex">
+                <div class="divTest">Div1</div>
+                <div class="divTest">Div2</div>
+                <div class="divTest">Div3</div>
+                <div class="divTest">Div4</div>
+                <div class="divTest">Div5</div>
+                <div class="divTest">Div6</div>
+                <div class="divTest">Div7</div>
+            </div>
+        </section>
         <section>footer</section>
         esta es la parte principal de una página
     </main>

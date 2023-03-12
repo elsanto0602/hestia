@@ -1,0 +1,89 @@
+p{
+    color:red;
+}
+
+h3{
+    color:blue;
+}
+
+a{
+    background-color: green;
+}
+
+#parrafo3{
+    color:green;
+}
+
+.textoGris{
+    color:grey;
+}
+
+.textoAzul{
+    color: blue;
+}
+
+.fondoRojo{
+    background-color: red;
+}
+
+.fondoAmarillo{
+    background-color: yellow;
+}
+
+.textoGrandeNegrita{
+    font-size: x-large;
+    font-weight: bold;
+    font-style: oblique;
+    font-stretch: narrower;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parrafoGris{
+    color:gray;
+}
+
+.imagenPequeña{
+    height: 200px;
+}
+
+.parrafoAngosto{
+    /*tener cuidado con el width y height*/
+    width: 350px;
+    
+}
+
+.contenedorConMargen{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+.parrafoPadding{
+    margin: 40px
+}
+
+.divTest{
+    border: 1px solid red;
+    
+    
+}
+
+.contenedorDivsGrid{
+    border: 2px solid green;
+    display: grid;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 150px 150px 300px;
+    margin: 20px;
+}
+
+.contenedorDivsFlex{
+    border: 2px solid green;
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    justify-content: space-around;
+    align-items: flex-start;    
+}
