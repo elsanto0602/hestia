@@ -12,21 +12,19 @@ ul{
     margin: 0px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 .logo{
     height: 70px;
 }
-=======
+
 .mainButton{
     background-color: #1bb76e;
     color:white;
-   
-=======
+}
+
 
 .button{
->>>>>>> 6-crear-boton-login
+
     border: 0px;
     padding: 5px 10px;
     border-radius: 8px;
@@ -38,14 +36,7 @@ ul{
 
     transform: scale(1.1);
 }
-<<<<<<< HEAD
->>>>>>> 5-crear-boton-nuevo-post
-=======
 
-.mainButton{
-    background-color: #1bb76e;
-    color:white;
-}
 .mainButton:hover{
 
     box-shadow: 2px 2px pink;
@@ -60,8 +51,6 @@ ul{
 .secondaryButton:hover{
     box-shadow: 1px 1px rgb(119, 229, 223);
 }
->>>>>>> 6-crear-boton-login
-=======
 .buscar{
     background-color: white;
     border: 1px solid gray;
@@ -77,4 +66,3 @@ ul{
     outline: none;
     border: 0px;
 }
->>>>>>> 8-crear-cuadro-de-busqueda
