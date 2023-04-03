@@ -13,6 +13,7 @@ ul{
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .logo{
     height: 70px;
 }
@@ -21,16 +22,41 @@ ul{
     background-color: #1bb76e;
     color:white;
    
+=======
+
+.button{
+>>>>>>> 6-crear-boton-login
     border: 0px;
     padding: 5px 10px;
     border-radius: 8px;
     font-weight: bolder;
-    
-
 }
-.mainButton:hover{
+
+.button:hover{
     cursor: pointer; /*para que por encima */
-    box-shadow: 2px 2px pink;
+
     transform: scale(1.1);
 }
+<<<<<<< HEAD
 >>>>>>> 5-crear-boton-nuevo-post
+=======
+
+.mainButton{
+    background-color: #1bb76e;
+    color:white;
+}
+.mainButton:hover{
+
+    box-shadow: 2px 2px pink;
+
+}
+
+.secondaryButton{
+    background-color: #66d8f5;
+    color: white;
+}
+
+.secondaryButton:hover{
+    box-shadow: 1px 1px rgb(119, 229, 223);
+}
+>>>>>>> 6-crear-boton-login
