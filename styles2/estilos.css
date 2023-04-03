@@ -12,6 +12,25 @@ ul{
     margin: 0px;
 }
 
+<<<<<<< HEAD
 .logo{
     height: 70px;
 }
+=======
+.mainButton{
+    background-color: #1bb76e;
+    color:white;
+   
+    border: 0px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bolder;
+    
+
+}
+.mainButton:hover{
+    cursor: pointer; /*para que por encima */
+    box-shadow: 2px 2px pink;
+    transform: scale(1.1);
+}
+>>>>>>> 5-crear-boton-nuevo-post
