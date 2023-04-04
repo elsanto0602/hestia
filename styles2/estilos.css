@@ -10,8 +10,16 @@ ul{
     justify-content: space-between;
     padding: 10px;
     margin: 0px;
+    background-color: rgba(9, 9, 131, 0.842);
+    border-bottom: 1px solid gray;
+    box-shadow: 2px 2px #5e0cc9;
 }
 
+.navbar > li{
+    display: flex;
+    align-items: center; /**para alinear los objetos del navabr*/
+
+}
 
 .logo{
     height: 70px;
@@ -56,6 +64,9 @@ ul{
     border: 1px solid gray;
     padding: 4px;
     border-radius: 8px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .buscar:focus-within{
@@ -65,4 +76,8 @@ ul{
 .buscar > input{
     outline: none;
     border: 0px;
+}
+
+.iconoBusqueda:hover{
+    color: blue;
 }
