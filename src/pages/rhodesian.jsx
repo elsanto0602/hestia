@@ -1,6 +1,13 @@
-function RhodesianInfoPage(){
-    return(
-        <div>Esta es la pagina de info del rhodesian</div>
+import Header from "components/Header";
+import Footer from "components/Footer";
+
+
+
+function RhodesianInfoPage() {
+    return (
+       
+            <div>informacion sobre el rhodesian</div>
+        
     );
 }
 
