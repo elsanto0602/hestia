@@ -7,6 +7,8 @@ function App() {
   return (
     <div className="App">
       <header>
+
+        <div>Hola mundo esto es un div</div>
         <ul className="navbar">
           <li>
             <img src={logo} alt="imagen" className="logo" />
@@ -31,27 +33,40 @@ function App() {
         <section>
           <h1>Razas de Perros</h1>
           <ul className="breedCardConteiner">
-            <li className="breedCard">
-              <div className="contenedorImagen">
-                <img src={borderCollie} alt="Border Collie" />
-              </div>
-              <span className="breedTitle">Border Collie</span>
-            </li>
-            <li className="breedCard">
-              <div className="contenedorImagen">
-                <img src={rhodesian} alt="Rhodesian" />
-              </div>
-              <span className="breedTitle">Rhodesian</span>
-    
-            </li>
-            <li>Raza 3</li>
-            <li>Raza 4</li>
+            <CardRazasPerros nombreRaza="BorderCollie" imagen={borderCollie}/>
+            <CardRazasPerros nombreRaza="Rhodesian" imagen={rhodesian}/>            
           </ul>
         </section>
         <section></section>
       </main>
-      <footer></footer>
+      <footer>
+        
+      </footer>
     </div>
+  );
+}
+
+/*
+con props
+function CardRazasPerros(props) {
+  return (
+    <li className="breedCard backgroundRojo">
+      <div className="contenedorImagen">
+        <img src={props.imagen} alt={props.nombreRaza} />
+      </div>
+      <span className="breedTitle">{props.nombreRaza}</span>
+    </li>
+  );
+}
+*/
+function CardRazasPerros({nombreRaza, imagen}) {
+  return (
+    <li className="breedCard backgroundRojo">
+      <div className="contenedorImagen">
+        <img src={imagen} alt={nombreRaza} />
+      </div>
+      <span className="breedTitle">{nombreRaza}</span>
+    </li>
   );
 }
 
