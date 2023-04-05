@@ -1,7 +1,8 @@
-import './styles/styles.css';
-import borderCollie from './media2/border_collie.jpg'
-import rhodesian from './media2/rhodesian.jpg'
-import logo from './media2/logo.png'
+import 'styles/styles.css';
+import borderCollie from 'media2/border_collie.jpg'
+import rhodesian from 'media2/rhodesian.jpg'
+import logo from 'media2/logo.png'
+import CardRazasPerros from 'components/CardRazasPerros';
 
 function App() {
   return (
@@ -59,15 +60,6 @@ function CardRazasPerros(props) {
   );
 }
 */
-function CardRazasPerros({nombreRaza, imagen}) {
-  return (
-    <li className="breedCard backgroundRojo">
-      <div className="contenedorImagen">
-        <img src={imagen} alt={nombreRaza} />
-      </div>
-      <span className="breedTitle">{nombreRaza}</span>
-    </li>
-  );
-}
+
 
 export default App;
