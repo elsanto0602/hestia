@@ -10,7 +10,7 @@ const Header = ({}) =>{
             <ul class="ulNavbar">
                 <li>
                     <div class="logoDiv">
-                        <Link to="./pages/index.jsx"><img class="logoImg" src={logo} alt="logoImg"></img></Link>
+                        <Link to="/"><img class="logoImg" src={logo} alt="logoImg"></img></Link>
                     </div>
                 </li>
                 <li>

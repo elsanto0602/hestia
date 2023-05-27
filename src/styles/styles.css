@@ -144,3 +144,11 @@ footer{
 .titleMP{
   text-align: center;
 }
+
+.card-counter{
+  justify-content: center;
+
+  
+  padding: 0.1rem;
+  text-align: center;
+}

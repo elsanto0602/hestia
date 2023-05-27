@@ -17,7 +17,8 @@ function App() {
         <Layout>
           <Routes>
 
-            <Route path="/" element={<Index />} exact />
+            <Route path="/" element={<Index />} exact />            
+            
             
 
           </Routes>
