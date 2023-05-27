@@ -1,28 +1,32 @@
-import logo from 'media2/logo.png';
+import logo from '../media2/logo.png';
+import { Link } from 'react-router-dom';
 
-const Header = () =>{
+const Header = ({}) =>{
     return (
         <header>
 
             
-            <ul className="navbar">
+<nav class="navbar">
+            <ul class="ulNavbar">
                 <li>
-                    <img src={logo} alt="imagen" className="logo" />
-                </li>
-                <li>
-                    <button className="button mainButton">Nuevo post</button>
-                </li>
-                <li>
-                    <div className="buscar">
-                        <input placeholder="Buscar una raza" />
-                        <i className="fa-solid fa-magnifying-glass button iconoBusqueda"></i>
+                    <div class="logoDiv">
+                        <Link to="./pages/index.jsx"><img class="logoImg" src={logo} alt="logoImg"></img></Link>
                     </div>
-
                 </li>
-                <li><button className="button secondaryButton">Login</button></li>
-                <li><button className="button mainButton">Registro</button></li>
-
+                <li>
+                    <button>PIDE EN LÍNEA</button>
+                </li>
+                <li>
+                    <button>MENÚ</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='../pages/login.html'">INICIAR SESIÓN</button>
+                </li>
+                <li>
+                    <button>CONTÁCTANOS</button>
+                </li>
             </ul>
+        </nav>
 
         </header>
     );
