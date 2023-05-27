@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function CardMenus({ nombreRaza, imagen }) {
+function CardMenus({}) {
   return (
     <div class="container">
         {/*

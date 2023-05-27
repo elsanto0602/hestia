@@ -1,7 +1,6 @@
 import 'styles/styles.css';
 import Index from 'pages/index';
-import RhodesianInfoPage from 'pages/rhodesian';
-import BorderCollie from "pages/bordercollie";
+
 
 import {
   BrowserRouter as Router,
@@ -19,8 +18,7 @@ function App() {
           <Routes>
 
             <Route path="/" element={<Index />} exact />
-            <Route path="/rhodesian" element={<RhodesianInfoPage exact />} />
-            <Route path="/bordercollie" element={<BorderCollie />} exact />
+            
 
           </Routes>
         </Layout>
