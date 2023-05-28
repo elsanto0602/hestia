@@ -1,54 +1,81 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ItemContador from "./ItemContador";
+import ItemListContainer from "./ItemListContainer";
+import pizza from "../media2/pizza.jpg"
+
+const Productos = [
+  {
+    nombre: "Pizza",
+    label: "lorem ipsum bla bla bla",
+    precio: 30000
+  },
+  {
+    nombre: "Lasagna",
+    label: "lorem ipsum bla bla bla",
+    precio: 30000
+  },
+  {
+    nombre: "Pizza",
+    label: "lorem ipsum bla bla bla",
+    precio: 30000
+  },
+  {
+    nombre: "Lasagna",
+    label: "lorem ipsum bla bla bla",
+    precio: 30000
+  },
+  {
+    nombre: "Pizza",
+    label: "lorem ipsum bla bla bla",
+    precio: 30000
+  },
+  {
+    nombre: "Lasagna",
+    label: "lorem ipsum bla bla bla",
+    precio: 30000
+  },
+]
 
 export const CardMenus = () => {
   
-  const onAdd = (valor) => {
-    console.log("Compraste ", {valor}, " unidades");
-  };
+  const [productos,setProductos] = useState([]);
 
+  useEffect(()=>{
+    setProductos(Productos);
+  },[])
 
-  /*
-  useEffect(() => {
-    if(contador){
-
-    }
-  }, [contador]);
-
-  
-
-  const incrementarContador = () => {
-    if (contador < 10) {
-      setContador((prevContador) => prevContador + 1);
-    }
-  };
-
-  
-  */
+ 
 
   return (
-    <div class="container">
-      {/*
-      <li className="breedCard backgroundRojo">
-        <Link to="/rhodesian">
-          <div className="contenedorImagen">
-            <img src={imagen} alt={nombreRaza} />
-          </div>
-        </Link>
-        <span className="breedTitle">{nombreRaza}</span>
-  </li>*/}
-
-      <div class="row">
-        <div class="card">
-          <img src="ruta_de_imagen_1.jpg" alt="Platillo 1"></img>
-          <div class="card-title">Platillo 1</div>
-          <div class="card-description">Descripción del platillo 1.</div>
-          <ItemContador initial={1} stock={5} onAdd={onAdd}/>
-        </div>
-      </div>
-    </div>
+    <NuevoProducto listaProductos={productos}></NuevoProducto>
   );
+}
+
+const NuevoProducto = ({listaProductos}) =>{
+  useEffect(()=>{
+    console.log("Este es el listado de productos",listaProductos)
+  },[listaProductos])
+  return(
+    <div class="container">
+    <div class="row">
+      
+        {listaProductos.map((producto)=>{
+          return(
+            <div className="card">
+              <img src={pizza} alt="Platillo 1"></img>
+              <div class="card-title">{producto.nombre}</div>
+              <div class="card-description">{producto.label}</div>
+              <div class="card-price">$ {producto.precio}</div>
+              <ItemListContainer ></ItemListContainer>
+            </div>
+          )
+        })}
+        
+      
+    </div>
+  </div>
+  )
 }
 
 export default CardMenus;

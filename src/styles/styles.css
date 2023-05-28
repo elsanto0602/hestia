@@ -110,18 +110,6 @@ footer{
   bottom: 0;
 }
 
-
-.card {
-  border: 0.1rem solid #00000060;
-  background-color: #ff9500a8;
-  
-  border-radius: 4px;
-  padding: 10px;
-  width: 300px;
-  margin: 10px;
-  text-align: center;
-}
-
 .card img {
   width: 100%;
   height: auto;
@@ -151,4 +139,22 @@ footer{
   
   padding: 0.1rem;
   text-align: center;
+}
+
+.card {
+  border: 0.1rem solid #00000060;
+  background-color: #ff9500ce;
+  
+  border-radius: 4px;
+  padding: 10px;
+  width: 50rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.breedCardConteiner{
+  
+  display: flex;
+  flex-direction: column;
+
 }

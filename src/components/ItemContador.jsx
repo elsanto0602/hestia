@@ -21,7 +21,7 @@ export const ItemContador = ({initial, stock, onAdd}) => {
       <button disabled={contador <= 1} onClick={decrementarContador}>
         -
       </button>
-      <span>{contador}</span>
+      <span className="contadorSpan">{contador}</span>
       <button disabled={contador >= stock} onClick={incrementarContador}>
         +
       </button>

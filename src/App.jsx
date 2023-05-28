@@ -1,6 +1,5 @@
 import 'styles/styles.css';
-import Index from 'pages/index';
-
+import Index from 'pages/Menu';
 
 import {
   BrowserRouter as Router,
@@ -9,6 +8,7 @@ import {
   Link
 } from "react-router-dom";
 import Layout from 'layouts/Layout';
+import Menu from 'pages/Menu';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Layout>
           <Routes>
 
-            <Route path="/" element={<Index />} exact />            
+            <Route path="/" element={<Menu/>} exact />            
             
             
 
