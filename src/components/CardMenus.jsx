@@ -2,80 +2,91 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ItemContador from "./ItemContador";
 import ItemListContainer from "./ItemListContainer";
-import pizza from "../media2/pizza.jpg"
-
+import { data } from "../data/data";
+import pizza from "../media2/pizza.jpg";
+/*
 const Productos = [
   {
+    id:1,
     nombre: "Pizza",
     label: "lorem ipsum bla bla bla",
-    precio: 30000
+    precio: 30000,
+    urlImage:pizza,
+    cantidad:1
   },
   {
+    id:2,
     nombre: "Lasagna",
     label: "lorem ipsum bla bla bla",
-    precio: 30000
-  },
-  {
-    nombre: "Pizza",
-    label: "lorem ipsum bla bla bla",
-    precio: 30000
-  },
-  {
-    nombre: "Lasagna",
-    label: "lorem ipsum bla bla bla",
-    precio: 30000
-  },
-  {
-    nombre: "Pizza",
-    label: "lorem ipsum bla bla bla",
-    precio: 30000
-  },
-  {
-    nombre: "Lasagna",
-    label: "lorem ipsum bla bla bla",
-    precio: 30000
-  },
-]
-
-export const CardMenus = () => {
+    precio: 35000,
+    urlImage: pizza,
+    cantidad:1
+  }
   
-  const [productos,setProductos] = useState([]);
-
-  useEffect(()=>{
-    setProductos(Productos);
-  },[])
-
+]
+*/
+export const CardMenus = ({
+  allProducts,
+  setAllProducts,
+  total,
+  setTotal,
+  contadorProductos,
+  setcontadorProductos,
+}) => {
+  const onAddProduct = (producto) => {
+    if (allProducts.find((item) => item.id === producto.id)) {
+      const productos = allProducts.map((item) =>
+        item.id === producto.id
+          ? { ...item, cantidad: item.cantidad + 1 }
+          : item
+      );
+      setTotal(total+producto.precio*producto.cantidad)
+      setcontadorProductos(contadorProductos+producto.cantidad);
+      return setAllProducts([...productos]);
+    }
+    setTotal(total+producto.precio*producto.cantidad)
+    setcontadorProductos(contadorProductos+producto.cantidad);
+    setAllProducts([...allProducts, producto]);
+  };
  
 
-  return (
-    <NuevoProducto listaProductos={productos}></NuevoProducto>
-  );
-}
+  const [productos, setProductos] = useState([]);
 
-const NuevoProducto = ({listaProductos}) =>{
-  useEffect(()=>{
-    console.log("Este es el listado de productos",listaProductos)
-  },[listaProductos])
-  return(
-    <div class="container">
-    <div class="row">
-      
-        {listaProductos.map((producto)=>{
-          return(
-            <div className="card">
-              <img src={pizza} alt="Platillo 1"></img>
-              <div class="card-title">{producto.nombre}</div>
-              <div class="card-description">{producto.label}</div>
-              <div class="card-price">$ {producto.precio}</div>
-              <ItemListContainer ></ItemListContainer>
+  useEffect(() => {
+    setProductos(data);
+  }, []);
+
+  return (
+    <NuevoProducto
+      listaProductos={productos}
+      onAddProduct={onAddProduct}
+    ></NuevoProducto>
+  );
+};
+
+const NuevoProducto = ({ listaProductos, onAddProduct }) => {
+  useEffect(() => {
+    console.log("Este es el listado de productos", listaProductos);
+  }, [listaProductos]);
+  return (
+    <div className="container">
+      <div className="row">
+        {listaProductos.map((producto) => {
+          return (
+            <div className="card" key={producto.id}>
+              <img src={producto.urlImage} alt={producto.nombre}></img>
+              <div className="card-title">{producto.nombre}</div>
+              <div className="card-description">{producto.label}</div>
+              <div className="card-price">$ {producto.precio}</div>
+              <button onClick={() => onAddProduct(producto)}>
+                Añadir al carrito
+              </button>
             </div>
-          )
+          );
         })}
-        
-      
+      </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
 export default CardMenus;

@@ -9,8 +9,15 @@ import {
 } from "react-router-dom";
 import Layout from 'layouts/Layout';
 import Menu from 'pages/Menu';
+import { useState } from 'react';
+import InicioSesion from 'pages/InicioSesion';
 
 function App() {
+
+  
+
+
+
   return (
     <div className="App">
       <Router>
@@ -18,6 +25,8 @@ function App() {
           <Routes>
 
             <Route path="/" element={<Menu/>} exact />            
+            
+            <Route path="/login" element={<InicioSesion/>} exact />            
             
             
 
