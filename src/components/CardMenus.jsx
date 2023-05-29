@@ -74,7 +74,7 @@ const NuevoProducto = ({ listaProductos, onAddProduct }) => {
         {listaProductos.map((producto) => {
           return (
             <div className="card" key={producto.id}>
-              <img src={producto.urlImage} alt={producto.nombre}></img>
+              <img className="imgCards" src={producto.urlImage} alt={producto.nombre}></img>
               <div className="card-title">{producto.nombre}</div>
               <div className="card-description">{producto.label}</div>
               <div className="card-price">$ {producto.precio}</div>

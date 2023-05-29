@@ -81,7 +81,7 @@ const Header = ({ allProducts, setAllProducts, total,setTotal , contadorProducto
                             <div className="cart-product" key={producto.id}>
                             <div className="info-cart-product">
                               <span className="cantidad-producto-carrito">
-                                {producto.cantidad}
+                                Cantidad: {producto.cantidad}
                               </span>
                               <p className="titulo-producto-carrito">
                                 {producto.nombre}

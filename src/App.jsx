@@ -9,14 +9,9 @@ import {
 } from "react-router-dom";
 import Layout from 'layouts/Layout';
 import Menu from 'pages/Menu';
-import { useState } from 'react';
 import InicioSesion from 'pages/InicioSesion';
 
 function App() {
-
-  
-
-
 
   return (
     <div className="App">
@@ -38,19 +33,6 @@ function App() {
   );
 }
 
-/*
-con props
-function CardRazasPerros(props) {
-  return (
-    <li className="breedCard backgroundRojo">
-      <div className="contenedorImagen">
-        <img src={props.imagen} alt={props.nombreRaza} />
-      </div>
-      <span className="breedTitle">{props.nombreRaza}</span>
-    </li>
-  );
-}
-*/
 
 
 export default App;

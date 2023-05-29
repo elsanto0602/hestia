@@ -90,14 +90,17 @@ h2{
   text-align: center;
 }
 .sectionIndex{
+
   text-align: center;
 }
 
 main{
+  
   display: flex;
   align-items: self-start;
   justify-content: center;
   overflow-y: scroll;
+
   height: 100vh;;
 }
 footer{
@@ -105,28 +108,29 @@ footer{
   justify-content: space-between;    
   flex-direction: row;
   background-color: #ff9500;
-  padding: 10px;
+  padding: 0.625rem;
   position:static;
   bottom: 0;
 }
 
 .card img {
-  width: 100%;
   height: auto;
 }
 
-.row{
+
+
+.row{  
   text-align: center;
 }
 
 .card .card-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .card .card-description {
-  margin-top: 5px;
+  margin-top: 0.313rem;
 }
 
 .titleMP{
@@ -145,18 +149,15 @@ footer{
   border: 0.1rem solid #00000060;
   background-color: #ff9500ce;
   
-  border-radius: 4px;
-  padding: 10px;
-  width: 50rem;
+  border-radius: 0.313rem;
+  padding: 0.625rem;
+  max-width: 50rem;
   margin: 1rem;
   text-align: center;
 }
 
-.breedCardConteiner{
-  
-  display: flex;
-  flex-direction: column;
-
+.imgCards{
+  max-width: 100%;
 }
 
 /**/
@@ -172,8 +173,8 @@ footer{
 
   background-color: #000;
   color: #fff;
-  width: 25px;
-  height: 25px;
+  width: 1.563rem;
+  height: 1.563rem;
 
   display: flex;
   justify-content: center;
@@ -182,19 +183,18 @@ footer{
 }
 
 #contador-productos{
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .container-cart-products{
   position: absolute;
-  top: 50px;
+  top: 3.438rem;
   right: 0;
-
   background-color: #fcfcfcd3;
-  width: 400px;
+  width:25rem;
   z-index: 1;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
-  border-radius: 10px;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.20);
+  border-radius: 0.625rem;
   
 }
 
@@ -202,9 +202,9 @@ footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 1.875rem;
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+  border-bottom: 0.063rem solid rgba(0, 0, 0, 0.20);
 
 }
 
@@ -215,23 +215,23 @@ footer{
 }
 
 .titulo-producto-carrito{
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .precio-producto-carrito{
   font-weight: 700;
-  font-size: 20px;
-  margin-left: 10px;
+  font-size: 1.25rem;
+  margin-left: 0.625rem;
 }
 
 .cantidad-producto-carrito{
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .icon-close{
-  width: 25px;
-  height: 25px;
+  width: 1.563rem;
+  height: 1.563rem;
 }
 
 .icon-close:hover{
@@ -243,17 +243,18 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
-  gap: 20px;
+  max-width: 15rem;
+  padding: 1.25rem 0;
+  gap: 1.25rem;
 }
 
 .cart-total h3{
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 
 .total-pagar{
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 900;
 }
 
@@ -266,14 +267,14 @@ footer{
   background-color: #ee0303c9;
   font-weight: bolder;
   color:black;
-  padding: 15px 0;
+  padding: 0.625rem 0;
   width: 100%;
-  margin-top : 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  margin-top : 0.625rem;
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
   font-family: inherit;
   cursor:pointer;
-  font-size:16px;
+  font-size:1.2rem;
   transition: all .3s ease;
 }
 
