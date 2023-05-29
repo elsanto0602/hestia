@@ -35,7 +35,7 @@ const Header = ({ allProducts, setAllProducts, total,setTotal , contadorProducto
             <button>MENÚ</button>
           </li>
           <li>
-            <button onClick="window.location.href='../pages/login.html'">
+            <button onClick={()=>{<Link to="/login"></Link>}}>
               INICIAR SESIÓN
             </button>
           </li>
@@ -132,36 +132,3 @@ const Header = ({ allProducts, setAllProducts, total,setTotal , contadorProducto
 
 export default Header;
 
-/*
-<div className={`container-cart-products hidden-cart ${active ? '' : 'hidden-cart'}`}>
-					<div className="row-product hidden">
-						<div className="cart-product">
-							<div className="info-cart-product">
-								<span className="cantidad-producto-carrito">1</span>
-								<p className="titulo-producto-carrito">Zapatos Nike</p>
-								<span className="precio-producto-carrito">$80</span>
-							</div>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor"
-								className="icon-close"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M6 18L18 6M6 6l12 12"
-								/>
-							</svg>
-						</div>
-					</div>
-
-					<div className="cart-total hidden">
-						<h3>Total:</h3>
-						<span className="total-pagar">$200</span>
-					</div>
-					<p className="cart-empty">El carrito está vacío</p>
-				</div>
-*/

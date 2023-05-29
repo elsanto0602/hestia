@@ -5,7 +5,7 @@ import Menu from 'pages/Menu';
 import { useState } from 'react';
 
 
-const Layout = () => {
+const LayoutMenu = () => {
     const [allProducts, setAllProducts] = useState([]);
   const [total,setTotal] = useState(0);  
   const [contadorProductos,setcontadorProductos] = useState(0);
@@ -26,4 +26,4 @@ const Layout = () => {
     )
 }
 
-export default Layout
+export default LayoutMenu
