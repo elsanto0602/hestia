@@ -16,11 +16,7 @@ function App() {
             <Route path="/" element={<Menu />} exact />
           </Routes>
         </LayoutMenu>
-        <LayoutLogin>
-          <Routes>
-            <Route path="/login" element={<InicioSesion />} exact />
-          </Routes>
-        </LayoutLogin>
+        
       </Router>
     </div>
   );

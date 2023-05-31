@@ -4,6 +4,23 @@ import ItemContador from "./ItemContador";
 import ItemListContainer from "./ItemListContainer";
 import { data } from "../data/data";
 import pizza from "../media2/pizza.jpg";
+import axios from "axios";
+
+const options = {
+  method:"POST",
+  url:'',
+  headers:{"content-Type":"application/json"},
+  data: {},
+}
+/*
+axios.request(options).then(function(response){
+  console.log(response.data);
+  {<div>Succesful</div>}
+}).catch(function(error){
+  console.error(error);
+  {<div>Not succesful</div>}
+});
+//1.40.34 react 8
 /*
 const Productos = [
   {
@@ -53,7 +70,16 @@ export const CardMenus = ({
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    setProductos(data);
+    const options = {method:'GET',url:'https://api.escuelajs.co/api/v1/products'};
+    axios
+    .request(options)
+    .then(function(response){
+      setProductos(response.data)
+    })
+    .catch(function(error){
+      console.error(error);
+    });
+    setProductos([]);
   }, []);
 
   return (
@@ -74,10 +100,10 @@ const NuevoProducto = ({ listaProductos, onAddProduct }) => {
         {listaProductos.map((producto) => {
           return (
             <div className="card" key={producto.id}>
-              <img className="imgCards" src={producto.urlImage} alt={producto.nombre}></img>
-              <div className="card-title">{producto.nombre}</div>
-              <div className="card-description">{producto.label}</div>
-              <div className="card-price">$ {producto.precio}</div>
+              <img className="imgCards" src={producto.images} alt={producto.nombre}></img>
+              <div className="card-title">{producto.title}</div>
+              <div className="card-description">{producto.description}</div>
+              <div className="card-price">$ {producto.price}</div>
               <button onClick={() => onAddProduct(producto)}>
                 Añadir al carrito
               </button>

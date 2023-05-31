@@ -7,7 +7,7 @@ const Header = ({ allProducts, setAllProducts, total,setTotal , contadorProducto
 
   const onDeleteProduct = (producto) =>{
     const results = allProducts.filter(item => item.id !== producto.id);
-    setTotal(total-producto.precio*producto.cantidad)
+    setTotal(total-producto.price*producto.cantidad)
     setcontadorProductos(contadorProductos-producto.cantidad);
     setAllProducts(results)
   };
@@ -84,10 +84,10 @@ const Header = ({ allProducts, setAllProducts, total,setTotal , contadorProducto
                                 Cantidad: {producto.cantidad}
                               </span>
                               <p className="titulo-producto-carrito">
-                                {producto.nombre}
+                                {producto.title}
                               </p>
                               <span className="precio-producto-carrito">
-                                ${producto.precio}
+                                ${producto.price}
                               </span>
                             </div>
                             <svg
