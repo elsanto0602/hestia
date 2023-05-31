@@ -2,21 +2,34 @@ import logo from "../media2/logo.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const Header = ({ allProducts, setAllProducts, total,setTotal , contadorProductos,setcontadorProductos}) => {
+const Header = ({
+  allProducts,
+  setAllProducts,
+  total,
+  setTotal,
+  contadorProductos,
+  setcontadorProductos,
+}) => {
   const [active, setActive] = useState(false);
-
-  const onDeleteProduct = (producto) =>{
-    const results = allProducts.filter(item => item.id !== producto.id);
-    setTotal(total-producto.price*producto.cantidad)
-    setcontadorProductos(contadorProductos-producto.cantidad);
-    setAllProducts(results)
+ 
+  const options = {
+    method: "POST",
+    url: "https://api.escuelajs.co/api/v1/products/",
+    headers: { "content-Type": "application/json" },
+    data: { id: allProducts },
+  };
+  const onDeleteProduct = (producto) => {
+    const results = allProducts.filter((item) => item.id !== producto.id);
+    setTotal(total - producto.price * producto.cantidad);
+    setcontadorProductos(contadorProductos - producto.cantidad);
+    setAllProducts(results);
   };
 
-  const onClearCart = () =>{
-    setAllProducts([])
-    setTotal(0)
-    setcontadorProductos(0)
-  }
+  const onClearCart = () => {
+    setAllProducts([]);
+    setTotal(0);
+    setcontadorProductos(0);
+  };
   return (
     <header>
       <nav className="navbar">
@@ -35,7 +48,11 @@ const Header = ({ allProducts, setAllProducts, total,setTotal , contadorProducto
             <button>MENÚ</button>
           </li>
           <li>
-            <button onClick={()=>{<Link to="/login"></Link>}}>
+            <button
+              onClick={() => {
+                <Link to="/login"></Link>;
+              }}
+            >
               INICIAR SESIÓN
             </button>
           </li>
@@ -63,9 +80,7 @@ const Header = ({ allProducts, setAllProducts, total,setTotal , contadorProducto
                   />
                 </svg>
                 <div className="count-products">
-                  <span id="contador-productos">
-                    {contadorProductos}
-                  </span>
+                  <span id="contador-productos">{contadorProductos}</span>
                 </div>
               </div>
 
@@ -77,46 +92,49 @@ const Header = ({ allProducts, setAllProducts, total,setTotal , contadorProducto
                 {allProducts.length ? (
                   <>
                     <div className="row-product">
-                        {allProducts.map(producto =>(
-                            <div className="cart-product" key={producto.id}>
-                            <div className="info-cart-product">
-                              <span className="cantidad-producto-carrito">
-                                Cantidad: {producto.cantidad}
-                              </span>
-                              <p className="titulo-producto-carrito">
-                                {producto.title}
-                              </p>
-                              <span className="precio-producto-carrito">
-                                ${producto.price}
-                              </span>
-                            </div>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              className="icon-close"
-                              onClick={()=>onDeleteProduct(producto)}
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M6 18L18 6M6 6l12 12"
-                              />
-                            </svg>
+                      {allProducts.map((producto) => (
+                        <div className="cart-product" key={producto.id}>
+                          <div className="info-cart-product">
+                            <span className="cantidad-producto-carrito">
+                              Cantidad: {producto.cantidad}
+                            </span>
+                            <p className="titulo-producto-carrito">
+                              {producto.title}
+                            </p>
+                            <span className="precio-producto-carrito">
+                              Precio: ${producto.price}
+                            </span>
                           </div>
-                        ))}
-                      
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            className="icon-close"
+                            onClick={() => onDeleteProduct(producto)}
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M6 18L18 6M6 6l12 12"
+                            />
+                          </svg>
+                        </div>
+                      ))}
                     </div>
                     <div className="cart-total">
                       <h3>Total:</h3>
                       <span className="total-pagar">${total}</span>
                     </div>
-
-                    <button className="btn-clear-all" onClick={onClearCart}>
-                            Vaciar Carrito
-                    </button>
+                    <div className="cart-buttons">
+                      <button className="btn-clear-all" onClick={onClearCart}>
+                        Vaciar Carrito
+                      </button>
+                      <button className="btn-pay-all" >
+                        Generar pedido
+                      </button>
+                    </div>
                   </>
                 ) : (
                   <p className="cart-empty">El carrito está vacío</p>
@@ -131,4 +149,3 @@ const Header = ({ allProducts, setAllProducts, total,setTotal , contadorProducto
 };
 
 export default Header;
-

@@ -6,12 +6,7 @@ import { data } from "../data/data";
 import pizza from "../media2/pizza.jpg";
 import axios from "axios";
 
-const options = {
-  method:"POST",
-  url:'',
-  headers:{"content-Type":"application/json"},
-  data: {},
-}
+
 /*
 axios.request(options).then(function(response){
   console.log(response.data);
