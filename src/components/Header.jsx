@@ -13,7 +13,9 @@ const Header = ({
   setcontadorProductos,
 }) => {
   const [active, setActive] = useState(false);
- 
+  
+  
+
   const onCreateOrder = () =>{
     
     const options = {
