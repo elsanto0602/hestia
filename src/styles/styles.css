@@ -187,9 +187,17 @@ footer{
   align-items: center;
   border-radius: 50%;
 }
+.count-products:hover{
+  cursor: pointer;
+}
 
 #contador-productos{
   font-size: 0.75rem;
+}
+
+.cartIcon{
+  width: 2rem;
+  
 }
 
 .container-cart-products{

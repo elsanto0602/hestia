@@ -15,7 +15,7 @@ axios.request(options).then(function(response){
   console.error(error);
   {<div>Not succesful</div>}
 });
-//1.40.34 react 8
+
 /*
 const Productos = [
   {
@@ -74,7 +74,7 @@ export const CardMenus = ({
     .catch(function(error){
       console.error(error);
     });
-    setProductos([]);
+    //setProductos([]);
   }, []);
 
   return (
